@@ -1,3 +1,4 @@
+// ///////////////////
 package restapi
 
 import (
@@ -10,7 +11,7 @@ import (
 )
 
 const (
-	URL          = "http://localhost:8082/topics/%s/partitions/%d"
+	URL          = "http://localhost:9092/topics/%s/partitions/%d"
 	CONTENT_TYPE = "application/vnd.kafka.json.v2+json"
 )
 
@@ -49,4 +50,5 @@ func main() {
 	for bodyAnswer.Scan() {
 		fmt.Println(bodyAnswer.Text())
 	}
+
 }
